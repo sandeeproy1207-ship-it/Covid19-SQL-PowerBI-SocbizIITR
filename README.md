@@ -1,69 +1,62 @@
-# Covid-19-Analysis-using-SQL-and-Power-Bi
-Dataset Source : https://ourworldindata.org/covid-deaths
-Hello #dataenthusiast today I am excited to share my new portfolio project on 🌟 COVID-19 ANALYSIS USING SQL & POWER BI🌟 
+# COVID-19 Global & India Analysis Dashboard
 
-It was a fantastic experience to work with such a huge amount of data in front of your face, Scrolling through the Excel sheet to visually get insights in a single glance and interact with the data is what drives me to push forward with this project.
+## Executive Summary
+This project offers an analysis of the COVID-19. It utilizes over 330,000 rows of Data to build a two-page BI dashboard, focusing on global and India-specific trends in cases, deaths, and vaccinations. The interactive dashboard provides key insights for strategic decision-making.
 
+## Business Problem
+The COVID-19 data can be overwhelming and difficult to interpret. Businesses, policymakers need a clear, concise, and interactive way to understand the pandemic's trends:
 
+* Track and compare the progression of cases, deaths, and vaccinations over time.
+* Identify the most affected countries and regions.
+* Analyze the relationship between key metrics like population, infection rates, and vaccination coverage.
+* Provide a focused analysis on the situation in India.
 
- 🚶‍♂️ Let me walk you through the Report - 
+## Methodology
+The project was executed in a structured, multi-stage process from data extraction to final presentation:
 
-You can find the raw dataset at: https://ourworldindata.org/covid-deaths
+1.  **Data Extraction & Cleaning (Microsoft Excel):** The initial dataset was sourced from **[Our World in Data - COVID-19 Dataset](https://ourworldindata.org/covid-deaths)** and loaded into Excel. Unnecessary columns were identified and removed.
 
-This Report mainly focuses on CASES, DEATHS & VACCINATIONS and contains 2 pages i.e, Global Stats & India's Stats. 
+2.  **Data Processing & Querying (PostgreSQL):** The cleaned CSV file was imported into a PostgreSQL database. Data types were adjusted as needed. SQL queries were written to analyze the data, utilizing features such as:
+    * **Common Table Expressions (CTEs)** and **Window Functions** for calculations.
+    * Standard clauses like `SELECT`, `FROM`, `WHERE`, `ORDER BY`, `ALIAS`, `GROUP BY`, `HAVING`, `LIKE`, `SUM()`, `ROUND()`.
+    
+3.  **Data Visualization (Microsoft Power BI):** The PostgreSQL database was connected as a live data source to Power BI. An interactive, two-page report was built:
+    * **Data Modeling:** Relationships between tables were established.
+    * **Calculations:** **DAX Measures** and **Calculated Columns** were created to derive insights like `Percentage of Cases per Population`.
+    * **Dashboard Design:** The report features dynamic slicers (Year, Quarter, Month), line charts, and column charts.
+    * **Interactive Dashboard Link:** You can access and interact with the live dashboard here: [https://app.powerbi.com/view?r=eyJrIjoiODM5MjNmOWItOWRkYi00Y2FhLTk3OTYtMTAyMmYyNWQwM2I1IiwidCI6IjM4ZjYyOTI2LTc1NTktNGFlZi04NGFlLWNiNWUxNzI0MDZmYiJ9](https://app.powerbi.com/view?r=eyJrIjoiODM5MjNmOWItOWRkYi00Y2FhLTk3OTYtMTAyMmYyNWQwM2I1IiwidCI6IjM4ZjYyOTI2LTc1NTktNGFlZi04NGFlLWNiNWUxNzI0MDZmYiJ9)
 
-🔶  The first page (Global Stats) KPI shows the Total Cases, Deaths, and vaccinations done from 08-01-2020 to 21-08-2023 with over 330K+ rows of data. 
+## Skills
+* **Data Analysis:** PostgreSQL (CTEs, Window Functions, Views, Aggregate Functions), DAX
+* **Data Visualization:** Microsoft Power BI (Dashboarding, Slicers, Data Modeling)
+* **Data Management:** Microsoft Excel (Data Cleaning, Filtering)
+  
+## Results
+The primary result is a dynamic two-page Power BI dashboard that effectively visualizes pandemic trends.
 
-◈ Yearly, Quarterly and Monthly dynamic slicers are given to drill dig inside Line charts time of Total Cases, Deaths, and vaccinations done globally.
+* **Page 1: Global Statistics**
+    * Displays KPIs for total cases, deaths, and vaccinations done from 08-01-2020 to 21-08-2023 with over 330k+ rows of data.
+    * Features yearly, quarterly, and monthly dynamic slicers to drill down inside Line charts showing Total Cases, Deaths, and Vaccinations.
+    * Column Charts to show world's Top 8 Nation's cases, with Percentage Cases/population, Death/Population, Vaccination/population.
 
-◈ Column Charts shows the world's Top 8 countries with the most cases, death and vaccinations along with Percentage(%) of Cases/population, Death/Population and vaccination/population (don't miss out on the tooltip for stacked information)
+* **Page 2: India Statistics**
+    * Completely dynamic, showing KPIs for Total Cases, Deaths, and Vaccinations done in India.
+    * Utilizes two kinds of Line Charts, each serving a distinct analytical purpose, to show the Total Cases, Deaths, and Vaccinations timeline.
 
-🔷  The Second Page (India's Stats) is completely dynamic and KPI shows the Total Cases, Deaths and Vaccinations done in India from the mentioned date above.
+## Business Recommendations
+The insights from this dashboard can inform several strategic decisions:
 
-◈ 2 different kinds of LINE CHARTS are used to show the Total cases, deaths and Vaccinations and each serves a different purpose from the others.
+* **Risk Assessment:** Businesses can use the geographical trends to assess operational risks and adjust supply chain or travel policies.
+* **Market Analysis:** Identification of regions where pandemic is lessening, signaling potential market recovery and opportunities for growth.
+* **Public Health Strategy:** Policymakers can use the dashboard to track vaccination campaign effectiveness and allocate resources more efficiently to heavily impacted areas.
 
+## Next Steps
+This project can be expanded in several ways to provide even greater value:
 
+* **Economic Impact Analysis:** Integrate economic datasets (e.g., GDP, unemployment rates) to analyze the correlation between the pandemic and economic performance.
+* **Predictive Modeling:** Develop a time-series forecasting model to predict future trends in cases or vaccination demand.
+* **Variant Analysis:** Incorporate data on different COVID-19 variants to analyze their specific impact on cases and mortality rates.
 
-❖ To check SQL queries, questions I asked and answered from this data and interact with the dashboard visit the website below :
-
-
-
-GitHub Repository: https://github.com/Sumir04/Covid-19-Analysis-using-SQL-and-Power-Bi
-
-novyPro (for interacting with the dashboard): https://www.novypro.com/project/covid-19-analysis-report-using-sql-and-power-bi-power-bi
-
-
-
-🔸 Tools I have used in this project - 
-
-» Microsoft Excel - Data Extraction, Data Cleaning, Data Filtering
-
-» PostgreSQL - Solved Queries to find complex information
-
-» Microsoft Power Bi - Data Visualization
-
-» Microsoft PowerPoint - Data presentation
-
-» Photoshop 2020 - Redesigned the logo as per project needs
-
-
-
-🔹 A brief explanation of work done inside tools :
-
-
-
-• In Excel, lots of unnecessary columns were present in the dataset which were removed, and a new dataset with the desired columns is used for this project
-
-
-
-• In PostgreSQL, CSV file has been imported with a lot of changes in data types made inside Postgres, SQL commands used in queries -
-
-SELECT, FROM, WHERE, ORDER BY, ALIAS, GROUP BY, HAVING, LIKE, SUM(), ROUND(), CTE (common table expression), WINDOWS FUNCTION, VIEWS, etc.
-
-
-
-• In Power BI, Imported the PostgreSQL COVID-19 database in power bi and made visualization from the query output, made relationships between tables, and created some calculated Column and DAX Measures for visualization
-
-
-
-• Two Buttons are shown in KPIs i.e. Eraser (Clears all Filters) and NEXT (Takes you to the next page) Both the PNG icons are taken from https://www.flaticon.com/
+## Contact
+**Sandeep Roy**
+* **LinkedIn:** [www.linkedin.com/in/sandeep--roy](https://www.linkedin.com/in/sandeep--roy)
